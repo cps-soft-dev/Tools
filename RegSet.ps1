@@ -5,11 +5,11 @@
 #regPath,regName,regType,regData,user,operating,displayName
 #工具功能：读取定义文件中内容，根据操作，用户，项目类型，调用不同的注册表操作更新注册表
 #1.定位读取条件
-#   用户=admin
+#   用户列包含admin
 #      1.1.操作=Add ：调用reg add （根据类型设定不同参数）
 #      1.2.操作=Del ：调用reg del （根据类型设定不同参数）
 #2.定位读取条件
-#   用户=user
+#   用户列包含user
 #      1.1.reg load HKU\Temp 该用户的ntuser.dat
 #      1.2.regPath中的HKEY_CURRENT_USER替换成HKU\Temp
 #      1.3.操作=Add ：调用reg add （根据类型设定不同参数）
