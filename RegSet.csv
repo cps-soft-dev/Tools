@@ -1,0 +1,7 @@
+regPath,regName,regType,regData,user,operating,displayName
+HKEY_LOCAL_MACHINE\SOFTWARE\Test,disableTest,REG_SZ,abc,Admin,Add,[Test] string
+HKEY_LOCAL_MACHINE\SOFTWARE\Test,testDword,REG_DWORD,0x12,Admin,Add,[Test] dword
+HKEY_LOCAL_MACHINE\SOFTWARE\Test,testMultiSz,REG_MULTI_SZ,abc\r\ncd,Admin,Add,[Test] Multi string
+HKEY_CURRENT_USER\SOFTWARE\Test,disableTest,REG_SZ,abc,Admin/user,Add,[Test] string
+HKEY_CURRENT_USER\SOFTWARE\Test,testDword,REG_DWORD,0x12,Admin/user,Add,[Test] dword
+HKEY_CURRENT_USER\SOFTWARE\Test,testMultiSz,REG_MULTI_SZ,abc\r\ncd,Admin/user,Add,[Test] Multi string
