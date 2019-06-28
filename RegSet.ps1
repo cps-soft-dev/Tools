@@ -51,17 +51,19 @@ function RegSetExec($id, $def)
         WriteLog "[add] $regText"
         if ($regType -match "DWORD") {
             WriteLog "reg.exe add `"$regPath`" /v `"$regName`" /t $regType /d  $regData  /f"
-            #reg.exe add "$regPath" /v "$regName" /t $regType /d  $regData  /f
+            reg.exe add "$regPath" /v "$regName" /t $regType /d  $regData  /f
         } else {
             WriteLog "reg.exe add `"$regPath`" /v `"$regName`" /t `"$regType`" /d  $regData  /f"
-            #reg.exe add "$regPath" /v "$regName" /t $regType /d "$regData" /f
+            reg.exe add "$regPath" /v "$regName" /t $regType /d "$regData" /f
         }
     }
     if ($regOper -eq "del") {
         WriteLog "[del] $regText"
-        if ($regData -eq "" -or $regData -eq "-") {
+        if ($regName -eq "" -or $regName -eq "-") {
+            WriteLog "reg.exe delete `"$regPath`" /f"
             reg.exe delete "$regPath" /f
         } else {
+            WriteLog "reg.exe delete `"$regPath`" /v `"$regName`" /f"
             reg.exe delete "$regPath" /v "$regName" /f
         }
     }
